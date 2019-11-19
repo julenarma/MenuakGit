@@ -40,69 +40,125 @@ public class MenuakGit {
 		switch (num) {
 
 		case SALIR:
-			System.out.println("Salir del programa");
+			System.out.println("Salir del programa ");
 			break;
 
 		case SUMAR:
-			int resultadosuma = 0;
-			resultadosuma = numero1 + numero2;
-            System.out.println("Introduce un numero");
+			
+            System.out.println("Introduce un numero ");
 			numero1 = teclado.nextInt();
-			System.out.println("Introduce otro numero");
+			System.out.println("Introduce otro numero ");
 			numero2 = teclado.nextInt();
-
-			System.out.println("La suma de los dos numeros es :" + resultadosuma);
+			suma(numero1,numero2);
 
 			break;
 
 		case RESTAR:
 
-			int resultadoresta = 0;
-			resultadoresta = numero1 - numero2;
-			System.out.println("Introduce un numero");
+			System.out.println("Introduce un numero ");
 			numero1 = teclado.nextInt();
-			System.out.println("Introduce otro numero para restar el primero");
+			System.out.println("Introduce otro numero para restar el primero ");
 			numero2 = teclado.nextInt();
-			System.out.println("La resta de los dos numeros es: " + resultadoresta);
+			resta(numero1,numero2);
 			break;
 
 		case MULTIPLICAR:
-			System.out.println("Introduce un numero");
+			System.out.println("Introduce un numero ");
 			numero1 = teclado.nextInt();
-			System.out.println("Introduce otro numero para multiplicar el primero");
+			System.out.println("Introduce otro numero para multiplicar el primero ");
 			numero2 = teclado.nextInt();
-			System.out.println("La multiplicación de los dos numeros es: " + numero1 * numero2);
-
+			multiplica(numero1,numero2);
 			break;
 
 		case DIVIDIR:
-			System.out.println("Introduce un numero");
-			numero3 = teclado.nextInt();
-			System.out.println("Introduce otro numero para dividir el número");
-			numero4 = teclado.nextInt();
-			System.out.println("La división de los dos numeros es: " + numero3 / numero4);
-
+			System.out.println("Introduce un numero ");
+			numero1 = teclado.nextInt();
+			System.out.println("Introduce otro numero para dividir el número ");
+			numero2 = teclado.nextInt();
+            division(numero1,numero2);
 			break;
-			
-			
+	
 		case FACTORIAL:
-			
-			long factorial=1;
-	        
-	        System.out.print("Introduce un número: ");
-	        numero1 = teclado.nextInt();
-	        for (int i = numero1; i > 0; i--) {
-	            factorial = factorial * i;
-	        }
-	        System.out.println("El factorial de " + numero1 + " es: " + factorial);
-	    }
-			
-
-			
-			
-			
-			
+			System.out.print("Introduce un número: ");
+		    numero1 = teclado.nextInt();
+			factorialnumero(numero1);
+			break;
+		}
 		}
 
+		public static void suma (int numero1, int numero2) {
+
+	
+			int resultadosuma = 0;
+			resultadosuma = numero1 + numero2;
+        
+			System.out.println("La suma de los dos numeros es : " + resultadosuma);
+
+			
+
+		}
+		
+		
+	public static void resta(int numero1, int numero2) {
+		
+		
+
+		int resultadoresta = 0;
+		resultadoresta = numero1 - numero2;
+	    System.out.println("La resta de los dos numeros es: " + resultadoresta);
+
+		}
+		
+	public static void multiplica(int numero1, int numero2) {
+		
+		
+
+		System.out.println("La multiplicación de los dos numeros es: " + numero1 * numero2);
+
 	}
+	
+	public static void division (int numero1, int numero2) {
+	
+
+		
+		System.out.println("La división de los dos numeros es: " + numero1 / numero2);
+
+
+		
+
+	}
+	
+	public static void factorialnumero(int numero1) {
+	
+	
+
+		long factorial=1;
+        
+      
+    
+        for (int i = numero1; i > 0; i--) {
+            factorial = factorial * i;
+        }
+        System.out.println("El factorial de " + numero1 + " es: " + factorial);
+    }
+	}	
+
+		
+
+	
+	
+	
+		
+		
+		
+		
+		
+		
+			
+			
+			
+			
+		
+
+	
 
