@@ -6,6 +6,7 @@ public class MenuakGit {
 	static final int RESTAR = 2;
 	static final int MULTIPLICAR = 3;
 	static final int DIVIDIR = 4;
+	static final int FACTORIAL = 5;
 
 	public static void main(String[] args) {
 
@@ -15,9 +16,13 @@ public class MenuakGit {
 
 		int numero1 = 0;
 		int numero2 = 0;
-
+        int num3;
 		double numero3 = 0.0;
 		double numero4 = 0.0;
+		
+		
+		
+		
 		do {
 
 			System.out.println("seleccione una categoria");
@@ -27,6 +32,7 @@ public class MenuakGit {
 			System.out.println("2 - Restar");
 			System.out.println("3 - Multiplicar");
 			System.out.println("4 - Dividir");
+			System.out.println("5 - Factorial");
 			num = teclado.nextInt();
 
 		} while (SALIR != 0);
@@ -77,8 +83,26 @@ public class MenuakGit {
 			System.out.println("La división de los dos numeros es: " + numero3 / numero4);
 
 			break;
+			
+			
+		case FACTORIAL:
+			
+			long factorial=1;
+	        
+	        System.out.print("Introduce un número: ");
+	        numero1 = teclado.nextInt();
+	        for (int i = numero1; i > 0; i--) {
+	            factorial = factorial * i;
+	        }
+	        System.out.println("El factorial de " + numero1 + " es: " + factorial);
+	    }
+			
 
+			
+			
+			
+			
 		}
 
 	}
-}
+
